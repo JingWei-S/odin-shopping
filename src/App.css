@@ -86,3 +86,21 @@
 nav {
   display: flex;
 }
+
+#cart {
+  position: relative;
+}
+
+#product-number {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  background-color: rgb(212, 154, 30);
+  color: white;
+  width: 1.6em;
+  height: 1.5em;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 0.1em;
+  font-weight: bold;
+}

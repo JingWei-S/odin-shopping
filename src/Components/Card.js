@@ -1,11 +1,12 @@
-import '../App.css';
-
+import "../App.css";
 
 const Card = (props) => {
+  const { toy_src, toy_id, toy_name, toy_price, setCartNum, cartNum } = props;
   const addToCart = () => {
-    console.log("Implement add to card function later.");
+    setCartNum(cartNum + 1);
+    console.log("add to cart");
   };
-  const { toy_src, toy_id, toy_name, toy_price } = props;
+
   return (
     <div className="product-display">
       <img
@@ -13,13 +14,11 @@ const Card = (props) => {
         src={process.env.PUBLIC_URL + toy_src}
         alt="A plush toy"
       />
-      <p className='toy-name'>{toy_name}</p>
-      <p className='toy-price'>{"$" + toy_price}</p>
+      <p className="toy-name">{toy_name}</p>
+      <p className="toy-price">{"$" + toy_price}</p>
       <button onClick={addToCart}>Add to Cart</button>
     </div>
   );
 };
 
 export default Card;
-
-

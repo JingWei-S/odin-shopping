@@ -1,5 +1,5 @@
 import Card from "./Card";
-const Shop = () => {
+const Shop = (props) => {
   const toys = [
     {
       src: "/img/Octupus 1.png",
@@ -50,6 +50,8 @@ const Shop = () => {
                 toy_id={toy.id}
                 toy_name={toy.name}
                 toy_price={toy.price}
+                setCartNum={props.setCartNum}
+                cartNum={props.cartNum}
               />
             );
           })}
