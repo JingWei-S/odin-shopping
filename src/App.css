@@ -36,3 +36,53 @@
     transform: rotate(360deg);
   }
 }
+
+.product-display {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  align-items: center;
+  /* border-radius: 2%; */
+  /* border: 1.5px solid lightgray; */
+  /* box-sizing: border-box; */
+  padding: 0.2em;
+}
+
+.product-display img {
+  width: calc(300px - 0.2em);
+}
+
+.product-display .toy-name {
+  font-size: 1.2em;
+  margin-top: 0.5em;
+  margin-bottom: 0;
+}
+
+.product-display .toy-price {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+.product-display button {
+  width: calc(300px - 0.2em);
+  background-color: black;
+  border: none;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 0.4em;
+}
+
+.products {
+  margin: 6em 250px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  justify-items: center;
+  gap: 4em 1em;
+}
+
+nav {
+  display: flex;
+}
