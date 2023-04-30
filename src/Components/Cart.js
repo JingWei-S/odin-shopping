@@ -1,11 +1,40 @@
+import { useEffect, useState } from "react";
+import CartItem from "./CartItem";
+
 const Cart = (props) => {
-    const { cartDetail, setCartDetail } = props;
+  const { cartDetail, setCartDetail, cartNum, setCartNum } = props;
+  // const findAddedProduct = () => {
+  //     const productArray = [];
+  //     cartDetail.findIndex((item) => {
+  //         if (item.bought) {
+  //             productArray.push({
+  //                 toy_src: item.src,
+  //                 toy_name: item.name,
+  //                 toy_price: item.count * item.price,
+  //                 toy_count: item.count
+  //             });
+  //         }
+  //     });
+  //     return productArray;
+  // }
 
-    
-
-    return (
-        <div>Hello from Cart page</div>
-    )
-}
+  return (
+    <div>
+      {cartDetail.map((toy) => {
+        return toy.bought ? (
+          <CartItem
+            cartDetail={cartDetail}
+            setCartDetail={setCartDetail}
+            setCartNum={setCartNum}
+            cartNum={cartNum}
+            item={toy}
+          />
+        ) : (
+          <></>
+        );
+      })}
+    </div>
+  );
+};
 
 export default Cart;

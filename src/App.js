@@ -103,7 +103,7 @@ function App() {
     } else {
       cardIconNum.style.display = "none";
     }
-  });
+  }, [cartDetail]);
 
   return (
     <>
@@ -145,7 +145,12 @@ function App() {
         <Route
           path="/cart"
           element={
-            <Cart cartDetail={cartDetail} setCartDetail={setCartDetail} />
+            <Cart
+              cartDetail={cartDetail}
+              setCartDetail={setCartDetail}
+              setCartNum={setCartNum}
+              cartNum={cartNum}
+            />
           }
         />
         <Route path="/shop/product/:id" element={<Description />} />
