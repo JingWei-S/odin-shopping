@@ -20,19 +20,21 @@ const Cart = (props) => {
 
   return (
     <div>
-      {cartDetail.map((toy) => {
-        return toy.bought ? (
-          <CartItem
-            cartDetail={cartDetail}
-            setCartDetail={setCartDetail}
-            setCartNum={setCartNum}
-            cartNum={cartNum}
-            item={toy}
-          />
-        ) : (
-          <></>
-        );
-      })}
+      <ul>
+          {cartDetail.map((toy) => {
+            return toy.bought ? (
+              <CartItem
+                cartDetail={cartDetail}
+                setCartDetail={setCartDetail}
+                setCartNum={setCartNum}
+                cartNum={cartNum}
+                item={toy}
+              />
+            ) : (
+              <></>
+            );
+          })}
+      </ul>
     </div>
   );
 };

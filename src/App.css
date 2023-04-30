@@ -104,3 +104,44 @@ nav {
   padding-top: 0.1em;
   font-weight: bold;
 }
+
+.cartItem {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid rgb(151, 151, 151);
+  height: 200px;
+  align-items: center;
+  gap: 1em;
+}
+
+.cartItem > img {
+  width: 160px;
+  height: 160px;
+}
+
+.cartItem .eachItem {
+  flex: 1 1 0%;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(2, auto);
+  gap: 0.5em;
+}
+
+.cartItem .cart-product-price {
+  text-align: right;
+}
+
+.cartItem .cart-product-removal {
+  justify-self: right;
+  align-self: center;
+  width: 1.5em;
+}
+
+.cartItem .cart-product-removal img {
+  width: 0.8em;
+}
+
+ul {
+  padding-left: 10em;
+  padding-right: 10em;
+}
