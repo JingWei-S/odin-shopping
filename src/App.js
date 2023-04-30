@@ -86,13 +86,24 @@ function App() {
       id: 10,
       name: "Cinnamon Cottontail",
       price: "16.99",
+      bought: false,
+      count: 0,
     },
-    { src: "/img/Poodle 1.png", id: 11, name: "Pom Pom Pup", price: "27.99" },
+    {
+      src: "/img/Poodle 1.png",
+      id: 11,
+      name: "Pom Pom Pup",
+      price: "27.99",
+      bought: false,
+      count: 0,
+    },
     {
       src: "/img/Poodle 2.png",
       id: 12,
       name: "Fifi Fluffball",
       price: "19.99",
+      bought: false,
+      count: 0,
     },
   ]);
 

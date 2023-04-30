@@ -87,6 +87,12 @@ nav {
   display: flex;
 }
 
+.cart-whole {
+  display: flex;
+  flex-direction: column;
+  padding: 2em 15em;
+}
+
 #cart {
   position: relative;
 }
@@ -141,7 +147,51 @@ nav {
   width: 0.8em;
 }
 
+.order-summary {
+  display: flex;
+  flex-direction: column;
+}
+
+.total-sum {
+  display: flex;
+  gap: 2em;
+  border-top: 1px solid rgb(151, 151, 151);
+  border-bottom: 1px solid rgb(151, 151, 151);
+}
+
+.total-sum p {
+ font-weight: bold;
+}
+
+.total-sum p:first-child {
+  margin-left: auto;
+}
+
+.order-summary > p{
+  margin-left: auto;
+}
+
+#place-order {
+  padding: 0.5em 2em;
+  font-size: 1em;
+  width: fit-content;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  margin-left: auto;
+  margin-top: 1em;
+}
+
+#place-order:hover {
+  background-color: rgb(250, 244, 182);
+  color: black;
+}
+
 ul {
-  padding-left: 10em;
-  padding-right: 10em;
+  padding-left: 0;
+  margin-bottom: 0;
 }

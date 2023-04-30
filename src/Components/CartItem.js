@@ -8,6 +8,7 @@ const CartItem = (props) => {
     const productIndex = cartDetail.findIndex((item) => item.id === id);
     if (count === 0) {
       newArray[productIndex].bought = false;
+      newArray[productIndex].count = count;
     } else {
       newArray[productIndex].count = count;
     }
@@ -37,7 +38,7 @@ const CartItem = (props) => {
       <img src={process.env.PUBLIC_URL + item.src} alt={item.name} />
       <div className="eachItem">
         <p className="cart-product-name">{item.name}</p>
-        <p className="cart-product-price">{"$" + item.price * item.count}</p>
+        <p className="cart-product-price">{"$" + (item.price * item.count).toFixed(2)}</p>
         <p>
           <button onClick={handleDecrement} className="cart-count-icon">
             -
