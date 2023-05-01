@@ -39,18 +39,15 @@ const CartItem = (props) => {
       <div className="eachItem">
         <p className="cart-product-name">{item.name}</p>
         <p className="cart-product-price">{"$" + (item.price * item.count).toFixed(2)}</p>
-        <p>
+        <p className="cart-count">
           <button onClick={handleDecrement} className="cart-count-icon">
-            -
+          ➖
           </button>
           {item.count}
           <button onClick={handleIncrement} className="cart-count-icon">
-            +
+          ➕
           </button>
         </p>
-        {/* <button onClick={handleRemoval} className="cart-product-removal">
-          Remove
-        </button> */}
         <img
           src={process.env.PUBLIC_URL + "./img/delete.svg"}
           alt="deletion cart icon"

@@ -38,7 +38,7 @@ const Cart = (props) => {
         </div>
         <p>{total > 65? "Free Shipping 🚀":"Shipping $10"}</p>
       </div>
-      <button id="place-order">Place Order 🔥</button>
+      <button id="place-order">Place Order  🔥</button>
     </div>
   );
 };

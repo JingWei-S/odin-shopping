@@ -164,7 +164,17 @@ function App() {
             />
           }
         />
-        <Route path="/shop/product/:id" element={<Description />} />
+        <Route
+          path="/shop/product/:id"
+          element={
+            <Description
+              cartDetail={cartDetail}
+              setCartDetail={setCartDetail}
+              setCartNum={setCartNum}
+              cartNum={cartNum}
+            />
+          }
+        />
       </Routes>
     </>
   );

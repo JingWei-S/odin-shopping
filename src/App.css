@@ -50,6 +50,11 @@
 
 .product-display img {
   width: calc(300px - 0.2em);
+  transition: transform 0.2s ease-in-out;
+}
+
+.product-display img:hover {
+  transform: scale(1.05);
 }
 
 .product-display .toy-name {
@@ -72,7 +77,36 @@
   font-size: 1em;
   font-weight: bold;
   padding: 0.4em;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
+
+.product-display button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.add-to-cart {
+  width: 350px;
+  font-size: 1.5em;
+  padding: 0.6em 2em;
+  background-color: #F9A826;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  margin-top: 2em;
+}
+
+.add-to-cart:hover {
+  background-color: #EF8F1D;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
 
 .products {
   margin: 6em 250px;
@@ -85,12 +119,61 @@
 
 nav {
   display: flex;
+  gap: 5em;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 1em 5em 1em 2em;
+  background-color: #fff;
+  box-shadow: 0 4px 6px -6px #222;
+  margin-bottom: 2em;
 }
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  margin-left: 2em;
+  font-weight: bold;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #666;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+
+nav li {
+  margin-left: 2em;
+  list-style: none;
+  font-size: 1.2em;
+}
+
 
 .cart-whole {
   display: flex;
   flex-direction: column;
   padding: 2em 15em;
+}
+
+.cart-count button {
+  border: none;
+  padding: 0em 0.25em;
+  font-size: 1.25em;
+  margin: 0.5em;
+  background-color: white;
+}
+
+.cart-count {
+  border: 1px solid grey;
+  width: max-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 #cart {
@@ -99,16 +182,24 @@ nav {
 
 #product-number {
   position: absolute;
-  top: 25px;
+  top: 15px;
   left: 20px;
   background-color: rgb(212, 154, 30);
   color: white;
-  width: 1.6em;
-  height: 1.5em;
+  width: 1.3em;
+  height: 1.3em;
   border-radius: 50%;
   text-align: center;
-  padding-top: 0.1em;
+  /* padding-top: 0.1em; */
   font-weight: bold;
+  font-size: 0.9em;
+}
+
+#cart-icon {
+  width: 2em;
+  /* vertical-align: middle; */
+  position: relative;
+  top: -10px;
 }
 
 .cartItem {
@@ -117,7 +208,7 @@ nav {
   border-top: 1px solid rgb(151, 151, 151);
   height: 200px;
   align-items: center;
-  gap: 1em;
+  gap: 3em;
 }
 
 .cartItem > img {
@@ -191,7 +282,55 @@ nav {
   color: black;
 }
 
-ul {
-  padding-left: 0;
-  margin-bottom: 0;
+
+
+.description {
+  display: flex;
+  margin: 2em 10em;
+  gap: 5em;
+}
+
+.img-intro {
+  width: 50%;
+  min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* margin-top: 2em; */
+}
+
+.description img {
+  width: 70%;
+  /* height: 70%; */
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.description > p {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #333;
+}
+
+.detail-toy-name {
+  font-size: 2em;
+}
+
+.detail-toy-price {
+  font-size: 1.5em;
+  margin-bottom: 2em;
+}
+
+.free-ship-label {
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  background-color: #00A8E8;
+  color: #FFF;
+  padding: 0.5em;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2em;
 }
