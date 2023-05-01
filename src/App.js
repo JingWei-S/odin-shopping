@@ -120,10 +120,10 @@ function App() {
     <>
       <nav>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/odin-shopping/">Home</Link>
         </li>
         <li>
-          <Link to="/shop">Shop</Link>
+          <Link to="/odin-shopping/shop">Shop</Link>
         </li>
         <li>
           <Link to="/cart">
@@ -141,9 +141,9 @@ function App() {
         </li>
       </nav>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/odin-shopping/" element={<Home />} />
         <Route
-          path="/shop"
+          path="/odin-shopping/shop"
           element={
             <Shop
               setCartNum={setCartNum}
@@ -154,7 +154,7 @@ function App() {
           }
         />
         <Route
-          path="/cart"
+          path="/odin-shopping/cart"
           element={
             <Cart
               cartDetail={cartDetail}
@@ -165,7 +165,7 @@ function App() {
           }
         />
         <Route
-          path="/shop/product/:id"
+          path="/odin-shopping/shop/product/:id"
           element={
             <Description
               cartDetail={cartDetail}
