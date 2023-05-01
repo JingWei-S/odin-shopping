@@ -176,6 +176,22 @@ function App() {
           }
         />
       </Routes>
+      <footer>
+        <div class="footer-content">
+          <p>Paws and Plushies &copy; 2023</p>
+          <ul>
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#">Terms of Service</a>
+            </li>
+            <li>
+              <a href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
     </>
   );
 }

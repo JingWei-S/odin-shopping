@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import CartItem from "./CartItem";
+import { Link } from "react-router-dom";
 
 const Cart = (props) => {
   const { cartDetail, setCartDetail, cartNum, setCartNum } = props;
@@ -38,7 +39,7 @@ const Cart = (props) => {
         </div>
         <p>{total > 65? "Free Shipping 🚀":"Shipping $10"}</p>
       </div>
-      <button id="place-order">Place Order  🔥</button>
+      <a href="/" onClick={() => window.location.reload()}><button id="place-order">Place Order  🔥</button></a>
     </div>
   );
 };

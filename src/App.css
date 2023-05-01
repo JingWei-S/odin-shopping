@@ -1,6 +1,16 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 
 .App-logo {
   height: 40vmin;
@@ -125,7 +135,7 @@ nav {
   padding: 1em 5em 1em 2em;
   background-color: #fff;
   box-shadow: 0 4px 6px -6px #222;
-  margin-bottom: 2em;
+  margin-bottom: 0.2em;
 }
 
 nav a {
@@ -262,6 +272,11 @@ nav li {
   margin-left: auto;
 }
 
+.cart-whole > a {
+  margin-left: auto;
+  margin-top: 1em;
+}
+
 #place-order {
   padding: 0.5em 2em;
   font-size: 1em;
@@ -273,15 +288,12 @@ nav li {
   cursor: pointer;
   transition: all 0.3s ease;
   border: none;
-  margin-left: auto;
-  margin-top: 1em;
 }
 
 #place-order:hover {
   background-color: rgb(250, 244, 182);
   color: black;
 }
-
 
 
 .description {
@@ -333,4 +345,85 @@ nav li {
   text-align: center;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   margin-bottom: 2em;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2em;
+  background-color: #f7f7f7;
+  flex-grow: 1;
+  box-shadow: 0 4px 6px -6px #888787;
+  margin-bottom: 0.2em;
+}
+
+.intro h1 {
+  font-size: 2.5em;
+  margin-bottom: 1em;
+}
+
+.intro p {
+  font-size: 1.5em;
+  line-height: 1.5;
+  margin-bottom: 2em;
+  max-width: 1000px;
+  min-width: 50%;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #ff6f61;
+  color: #fff;
+  font-size: 1.2em;
+  padding: 1em 2em;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #e65f53;
+}
+
+footer {
+  background-color: #F9F9F9;
+  padding: 2em 0;
+  margin-top: auto;
+  /* margin-top: 0.2em; */
+  /* border: top; */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul li {
+  margin: 0 1em;
+}
+
+ul li a {
+  color: #666;
+  text-decoration: none;
+  font-size: 1em;
 }
