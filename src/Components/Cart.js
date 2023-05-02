@@ -15,7 +15,8 @@ const Cart = (props) => {
     setTotal(calTotal.toFixed(2));
   }, [cartDetail]);
 
-  const handleClick = () => {
+  const handleClick = (event) => {
+    event.preventDefault();
     window.location.reload();
   };
 
@@ -43,7 +44,9 @@ const Cart = (props) => {
         </div>
         <p>{total > 65? "Free Shipping 🚀":"Shipping $10"}</p>
       </div>
-      <Link to="/" onClick={handleClick} id="place-order">Place Order 🔥</Link>
+      <div onClick={handleClick} style={{marginLeft: "auto", marginTop: "2em"}}>
+        <Link to="/" id="place-order">Place Order 🔥</Link>
+      </div>
     </div>
   );
 };
