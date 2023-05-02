@@ -128,11 +128,12 @@ function App() {
         <li>
           <Link to="/cart">
             <div id="cart">
-              <img
+              {/* <img
                 id="cart-icon"
                 src={process.env.PUBLIC_URL + "./img/shopping_cart.svg"}
                 alt="shopping cart icon"
-              />
+              /> */}
+              <p id="cart-icon">🛒</p>
               <div id="product-number" style={{ display: "none" }}>
                 {cartNum}
               </div>

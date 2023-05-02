@@ -48,12 +48,13 @@ const CartItem = (props) => {
           ➕
           </button>
         </p>
-        <img
+        {/* <img
           src={process.env.PUBLIC_URL + "./img/delete.svg"}
           alt="deletion cart icon"
           onClick={handleRemoval}
           className="cart-product-removal"
-        />
+        /> */}
+        <p className="cart-product-removal" onClick={handleRemoval}>🗑️</p>
       </div>
     </li>
   );
