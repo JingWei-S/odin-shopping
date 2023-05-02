@@ -15,6 +15,10 @@ const Cart = (props) => {
     setTotal(calTotal.toFixed(2));
   }, [cartDetail]);
 
+  const handleClick = () => {
+    window.location.reload();
+  };
+
   return (
     <div className="cart-whole">
       <ul>
@@ -39,7 +43,7 @@ const Cart = (props) => {
         </div>
         <p>{total > 65? "Free Shipping 🚀":"Shipping $10"}</p>
       </div>
-      <a href="/" onClick={() => window.location.reload()}><button id="place-order">Place Order  🔥</button></a>
+      <Link to="/" onClick={handleClick} id="place-order">Place Order 🔥</Link>
     </div>
   );
 };
